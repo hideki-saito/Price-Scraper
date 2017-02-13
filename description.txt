@@ -1,0 +1,39 @@
+I need a python program that scrapes product review data from marksandspencer.com.
+
+I want to be able to run from the commandline:
+
+python m_and_s_scraper.py infile outfile
+
+infile will be a text file containing product_category_urls eg:
+http://www.marksandspencer.com/l/women/coats-and-jackets/
+
+outfile will specify the location of the csv to writeback.
+there should be one row written per review, containing all the fields returned by the
+product_review_scraper function detailed below.
+
+Below I sketch out the two main functions required in this implementation:
+def products_in_category_iterator(product_category_url):
+    '''
+    Iterator over product urls for all products in a category
+    Args:     Product_category_url : url that points to a product category eg ‘http://www.marksandspencer.com/l/women/coats-and-jackets/’
+    Yields:
+        product_url
+    '''
+    
+    
+def product_review_scraper(product_url):
+    '''
+    Iterator over reviews for a particular product
+    Args:
+        product_url string containing product url eg.
+    
+    Yields:
+        review dict containing the following fields: {OverallScore:int, Quality:int, ValueForMoney:int,
+                                                    Fit:int, Style:int, HowDoesItFit:string, ReviewText:string,
+
+                                                    ReviewTitle:string, ReviewDate:string,
+                                                    ReviewerAge:int, ReviewerFrom:string, ProductName:string,
+                                                    ProductCode:string}
+    '''
+    
+
